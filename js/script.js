@@ -20,16 +20,16 @@ const validacionForm = (e) => {
 	switch (e.target.name) {
 
 		case "nombre":
-			validarCampo(expresiones.nombre, e.target, 'nombre');
+			validarCampo(expresiones.nombre, e.target, `nombre`);
 			break;
 		case "apellido":
-			validarCampo(expresiones.apellido, e.target, 'apellido');
+			validarCampo(expresiones.apellido, e.target, `apellido`);
 			break;
 		case "correo":
-			validarCampo(expresiones.correo, e.target, 'correo');
+			validarCampo(expresiones.correo, e.target, `correo`);
 			break;
 		case "telefono":
-			validarCampo(expresiones.telefono, e.target, 'telefono');
+			validarCampo(expresiones.telefono, e.target, `telefono`);
 			break;
 	}
 }
@@ -56,23 +56,21 @@ inputs.forEach((input) => {
 	input.addEventListener('keyup', validacionForm);
 	input.addEventListener('blur', validacionForm);
 })
-
+//No envia el formulario
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
-})
-/*
-if(campos.nombre && campos.apellido && campos.correo && campos.telefono){
-	formulario.reset();
 
-	document.getElementById('formulario_mensaje-exito').classList.add('formulario_mensaje-exito-activo');
-	setTimeout(() => {
-		document.getElementById('formulario_mensaje-exito').classList.remove('formulario_mensaje-exito-activo');
-	}, 5000);
 
-	document.querySelectorAll('.formulario_grupo-correcto').forEach((icono) => {
-		icono.classList.remove('formulario_grupo-correcto');
-	});
-} else {
-	document.getElementById('formulario_mensaje').classList.add('formulario_mensaje-activo')
-}
-*/
+	const envioCorrecto = document.getElementById('formulario');
+	if(campos.nombre && campos.apellido && campos.correo && campos.telefono == true){
+		formulario.reset();
+
+		document.getElementById('formulario_mensaje-exito').classList.add('formulario_mensaje-exito-activo');
+
+		document.querySelectorAll('.formulario_grupo-correcto').forEach((icono) => {
+			icono.classList.remove('formulario_grupo-correcto');
+		});
+	} else {
+		document.getElementById('formulario_mensaje').classList.add('formulario_mensaje-activo');
+	}
+});
