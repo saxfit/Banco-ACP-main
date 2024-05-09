@@ -1,0 +1,509 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+BODY {
+    background-color: #ffffff;
+    color: #CCCCCC;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.contenedor {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+.cabecera {
+    width: 100%;
+    background-color: #006666;
+    height: 120px;
+    text-shadow: #000000 1px 1px 1px;
+    color: #e9e9e9;
+    font-weight: bold;
+    border-bottom: #cccccc 1px solid;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    -ms-grid-row-align: center;
+    /* Prefijo de proveedor para Internet Explorer */
+    -ms-grid-columns: auto auto;
+    /* Prefijo de proveedor para Internet Explorer */
+    display: -ms-grid;
+    /* Prefijo de proveedor para Internet Explorer */
+
+}
+
+.cabecera a {
+    color: #e9e9e9;
+    text-decoration: none;
+}
+
+
+.cabecera .logo {
+    margin-right: 60px;
+    font-size: 3.5em;
+    font-weight: 900;
+}
+
+.cabecera .menu {
+    padding-top: 20px;
+    margin-left: 60px;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+.cabecera .menu ul a {
+    transition: all 0.3s ease;
+}
+
+.cabecera .menu ul a:hover {
+    text-align: center;
+    background-color: #008584;
+}
+
+.cabecera .menu li {
+    padding: 8px;
+    display: inline;
+}
+
+@media (min-width: 220px) and (max-width: 1100px) {
+    .cabecera {
+        grid-template-columns: auto;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+    }
+
+    .cabecera .logo {
+        margin-right: 0px;
+        padding: 0px;
+    }
+
+    .cabecera .menu {
+        margin: 0px;
+        padding: 0px;
+        font-size: 1em;
+    }
+
+    .cabecera .logo img {
+        width: 48px;
+        height: 48px;
+        margin: 0px;
+    }
+}
+
+@media (max-width: 450px) {
+    .cabecera {
+        height: 80px;
+    }
+
+    .cabecera .logo {
+        font-size: 1.9em;
+    }
+
+    .cabecera .logo img {
+        width: 32px;
+        height: 32px;
+        margin: 0px;
+    }
+
+    .cabecera .menu li {
+        margin: 0px;
+        padding: 0px;
+        font-size: 0.7em;
+        letter-spacing: 0px;
+        text-decoration: none;
+    }
+}
+.service {
+    background-color:#cccccc ;
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+}
+.serviceBox1 div h3 {
+    display: inline-block;
+    position: relative;
+    font-size: 3vw;
+    color: #e9e9e9;
+    position: inherit;
+}
+.serviceBox2 div h3 {
+    display: inline-block;
+    position: relative;
+    font-size: 3vw;
+    color: #008584;
+    position: inherit;
+}
+.serviceBox1 {
+    margin: 5px 0;
+    padding: 20px auto;
+    background-color: #008584;
+    display: grid;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+.serviceBox2 {
+    margin: 5px 0;
+    padding: 20px auto;
+    background-color:#e9e9e9; 
+    display: grid;   
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.servInt {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    align-items: normal;
+    justify-content: space-around;
+}
+.servInt div p {
+    width: 100%;
+}
+.servInt img {
+    image;
+}
+.servImg {
+    width: 80%;
+    max-height: 339px;
+    max-width: 508.8px;
+
+}
+.oscuro  {
+    font-size: 1vw;
+    color: #e9e9e9;
+    padding: 10px;
+}
+.oscuro h4 {
+    color: #e9e9e9;
+    font-size: 2vw;
+    padding: 10px;
+}
+.oscuro button {
+    border: #000000;
+    border-radius: 15px;
+    background-color:#cccccc;
+    cursor:pointer;
+    margin-bottom: 10px;
+}
+.oscuro a {
+    text-decoration: none;
+}
+.oscuro ul {
+    list-style: none;
+}
+#h4Osc {
+    color: #008584;
+}
+.cajaAhorro p {
+    margin: 0px, 50px;
+}
+.service {
+    padding-top: 110px;
+}
+.claro {
+    font-size: 1vw;
+    color:#008584;
+    list-style: none;
+    padding: 10px;
+}
+.claro ul {
+    list-style: none;
+}
+.claro h4 {
+    font-size: 2vw;
+    color:#008584;
+    padding: 10px;
+}
+.claro button {
+    border: #000000;
+    border-radius: 15px;
+    background-color: #008584;
+    cursor:pointer;
+    margin-bottom: 10px;
+}
+
+#h4Btn { 
+    color:#e9e9e9;
+}
+.claro a h4 {
+    text-decoration: none;
+    color: #008584;
+}
+
+.claro a {
+    text-decoration: none;
+}
+
+/* Estilos específicos para pantallas más pequeñas (móviles) */
+@media only screen and (max-width: 600px) {
+    .servInt {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+     .servInt img { 
+        display: none;
+    }
+    .oscuro p {
+        display: none;
+    }
+
+    .claro p {
+        display: none;
+    }
+}
+
+/* Estilos específicos para pantallas medianas (tabletas) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .servInt {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        background-color: none;
+    }
+    .servInt img { 
+        display: grid;
+    }
+    /* .servInt {
+        background-image: url("../Banco-ACP-1/slider/img/cajaAhorro.jpg");
+        position: relative;
+    } */
+
+}
+
+/* Estilos específicos para pantallas grandes (escritorios) */
+@media only screen and (min-width: 1025px) {
+    .container {
+        width: 80%;
+    }
+}
+
+.pie {
+    background-color: #006666;
+    color: #fff;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pie h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.pie a {
+    text-transform: none;
+    text-decoration: none;
+    color: #e9e9e9;
+}
+
+.pie .logo-pie {
+    display: grid;
+    grid-template-columns: auto;
+    font-size: 3.5em;
+    font-weight: 900;
+    color: #e9e9e9;
+    margin-right: 30px;
+}
+
+.pie .logo-pie a {
+    text-decoration: none;
+    color: #e9e9e9;
+}
+
+.pie .info-footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.pie .info-footer .menu {
+    width: 260px;
+    height: auto;
+}
+
+.pie .info-footer .ayuda {
+    width: 180px;
+    height: 130px;
+}
+
+.pie .info-footer .rrss {
+    width: 190px;
+    height: 130px;
+}
+
+.pie .info-footer .legales {
+    width: 140px;
+    height: 130px;
+}
+
+.pie .info-footer ul {
+    margin: 5px 0px 0px 0px;
+    padding: 0px;
+}
+
+.pie .info-footer ul li {
+    list-style: none;
+    color: #e9e9e9;
+}
+
+@media (min-width: 220px) and (max-width: 480px) {
+    .destacados-img {
+        display: none;
+    }
+
+    .pie {
+        color: #fff;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .pie .logo-pie {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        text-align: center;
+        font-size: 3.5em;
+        font-weight: 900;
+        color: #e9e9e9;
+    }
+
+    .pie .info-footer {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .pie .info-footer .menu {
+        margin-bottom: 20px;
+        width: 180px;
+        height: auto;
+    }
+
+    .pie .info-footer .ayuda {
+        width: 180px;
+        height: 100px;
+    }
+
+    .pie .info-footer .rrss {
+        width: 190px;
+        height: 100px;
+    }
+
+    .pie .info-footer .legales {
+        width: 180px;
+        height: 100px;
+    }
+
+    .pie .info-footer ul {
+        margin: 5px 0px 0px 0px;
+        padding: 0px;
+    }
+
+    .pie .info-footer ul li {
+        list-style: none;
+        color: #e9e9e9;
+    }
+
+}
+
+@media (min-width: 480px) and (max-width: 1050px) {
+
+    .pie {
+        color: #fff;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        width: 100%;
+    }
+
+    .pie .logo-pie {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        text-align: center;
+        font-size: 3.5em;
+        font-weight: 900;
+        color: #e9e9e9;
+    }
+
+    .pie .info-footer {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .pie .info-footer .menu {
+        margin-bottom: 20px;
+        width: 260px;
+        height: auto;
+    }
+
+    .pie .info-footer .ayuda {
+        width: 180px;
+        height: 130px;
+    }
+
+    .pie .info-footer .rrss {
+        width: 190px;
+        height: 130px;
+    }
+
+    .pie .info-footer .legales {
+        width: 140px;
+        height: 130px;
+    }
+
+    .pie .info-footer ul {
+        margin: 5px 0px 0px 0px;
+        padding: 0px;
+    }
+
+    .pie .info-footer ul li {
+        list-style: none;
+        color: #e9e9e9;
+    }
+
+}
+.summOscuro {
+    background-color:#CCCCCC;
+    border-radius: 50px;
+    max-width:max-content;
+    display: inline-flex;
+}
+.summOscuro H4 {
+    color: #006666;
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9vw;
+}
+details {
+  padding: 10px;
+}
