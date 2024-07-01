@@ -56,7 +56,7 @@ BODY {
 .cabecera .logo {
     margin-right: 60px;
     font-size: 3.5em;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .cabecera .menu {
@@ -79,6 +79,13 @@ BODY {
     padding: 8px;
     display: inline;
 }
+
+/* MENU HAMBUR */
+.menu-abrir,
+.menu-cerrar {
+    display: none;
+}
+
 
 @media (min-width: 220px) and (max-width: 1100px) {
     .cabecera {
@@ -128,8 +135,41 @@ BODY {
         font-size: 0.7em;
         letter-spacing: 0px;
     }
-}
 
+    /* MENU HAMBUR */
+    .menu-abrir,
+    .menu-cerrar {
+        display: block;
+        border: 0;
+        font-size: 1.5rem;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--texto);
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        box-shadow: 0 0 0 100vmax rgba(0, 133, 132, 0.5);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .navbar ul {
+        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    .navbar.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+}
 
 .contenido {
     width: 100%;
@@ -559,8 +599,8 @@ BODY {
 .pie .logo-pie {
     display: grid;
     grid-template-columns: auto;
-    font-size: 3.5em;
-    font-weight: 900;
+    font-size: 2em;
+    font-weight: 600;
     color: var(--texto);
     margin-right: 30px;
 }
@@ -690,8 +730,8 @@ BODY {
         align-items: center;
         text-align: center;
         font-size: 3.5em;
-        font-weight: 900;
-        color:var(--texto);
+        font-weight: 600;
+        color: var(--texto);
     }
 
     .pie .info-footer {
@@ -772,15 +812,15 @@ BODY {
     height: 250px;
 }
 
-.contacto h3 {
+/* .contacto h3 {
     color: var(--primary-color);
     font-size: 1.4em;
     text-transform: uppercase;
     text-shadow: -1px 3px 4px rgba(0, 0, 0, 0.29);
     font-weight: bold;
     padding-bottom: 10px;
-    text-align: center;
-}
+    text-align: center; 
+} */
 
 .formulario {
     display: grid;
@@ -791,6 +831,7 @@ BODY {
     box-shadow: -1px 3px 4px rgba(0, 0, 0, 0.29);
     border-radius: 20px;
     text-align: left;
+    margin-bottom: 20px;
 
 }
 
@@ -825,7 +866,6 @@ option {
     color: var(--primary-color);
     padding-left: 10px;
     border-radius: 5px;
-    /*VER SI QUIEREN BORDES REDONDEADOS O NO*/
     background-color: rgba(0, 122, 122, 0.3);
     height: 25px;
     line-height: 25px;
@@ -913,7 +953,6 @@ input::placeholder {
     color: var(--texto);
     background-color: rgba(0, 122, 122, 0.3);
     border-radius: 10px;
-    /*VER SI QUIEREN BORDES REDONDEADOS O TODOS LO BOTONES IGUALES*/
     box-shadow: 0px 9px 6px 0px rgba(0, 0, 0, 0.1);
     font-weight: 600;
     cursor: pointer;
@@ -967,7 +1006,8 @@ button:hover {
     opacity: 1;
 }
 
-@media (max-width:800px) {
+@media (min-width: 480px) and (max-width: 1050px) {
+
     .formulario {
         grid-template-columns: 1fr;
     }
@@ -979,5 +1019,9 @@ button:hover {
 
     .formulario_btn {
         width: 100%;
+    }
+
+    #grupo_file {
+        padding: 15px 0;
     }
 }
